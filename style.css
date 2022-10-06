@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.inputArea {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "text1  theWord theWord"
+    "text2 theWord theWord"
+    "text2 btn btn"
+    "word .  .";
+  gap: 2rem;
+}
+
+.theWord {
+  grid-area: theWord;
+  align-self: flex-end;
+  justify-self: start;
+}
+.inputVal0 {
+  resize: none;
+  grid-area: text1;
+}
+
+.inputVal1 {
+  resize: none;
+  grid-area: text2;
+}
+
+.btnTransform {
+  height: 2rem;
+  justify-self: self-start;
+  align-self: center;
+  width: 4rem;
+
+  grid-area: btn;
+}
+
+.word {
+  grid-area: word;
+}
